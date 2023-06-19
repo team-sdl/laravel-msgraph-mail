@@ -10,6 +10,7 @@
     "microsoft",
     "graph"
   ],
+  "homepage": "http://github.com/lsi2021/laravel-msgraph-mail",
   "license": "MIT",
   "authors": [
     {
