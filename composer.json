@@ -10,12 +10,10 @@
     "microsoft",
     "graph"
   ],
-  "homepage": "https://github.com/wapacro/laravel-msgraph-mail",
   "license": "MIT",
   "authors": [
     {
       "name": "Roman Ackermann",
-      "homepage": "https://github.com/wapacro"
     }
   ],
   "require": {
