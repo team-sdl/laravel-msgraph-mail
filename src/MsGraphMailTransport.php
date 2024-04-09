@@ -98,7 +98,7 @@ class MsGraphMailTransport extends Transport {
 
         return array_filter([
             'subject' => $message->getSubject(),
-            'sender' => $this->toRecipientCollection([$message->getReturnPath() => 'LSI2021'] ?? $from)[0],
+            'sender' => $this->toRecipientCollection($from)[0],
             'from' => $this->toRecipientCollection($from)[0],
             'replyTo' => $this->toRecipientCollection($message->getReplyTo()),
             'toRecipients' => $this->toRecipientCollection($message->getTo()),
