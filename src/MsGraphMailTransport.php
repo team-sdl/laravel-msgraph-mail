@@ -104,12 +104,13 @@ class MsGraphMailTransport extends Transport {
             'toRecipients' => $this->toRecipientCollection($message->getTo()),
             'ccRecipients' => $this->toRecipientCollection($message->getCc()),
             'bccRecipients' => $this->toRecipientCollection($message->getBcc()),
-            'importance' => $priority === 3 ? 'Normal' : ($priority < 3 ? 'Low' : 'High'),
+            'importance' => $priority === 3 ? 'Normal' : ($priority < 3 ? 'Low' : 'High'),                
             'body' => [
                 'contentType' => Str::contains($message->getContentType(), ['plain']) ? 'text' : 'html',
                 'content' => $message->getBody(),
             ],
             'attachments' => $this->toAttachmentCollection($attachments),
+            'singleValueExtendedProperties' => [['id' => 'String 0x1046', 'value' => $message->getReturnPath()]],                
         ]);
     }
 
