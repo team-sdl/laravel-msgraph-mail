@@ -100,6 +100,7 @@ class MsGraphMailTransport extends Transport {
             'subject' => $message->getSubject(),
             'sender' => $this->toRecipientCollection($from)[0],
             'from' => $this->toRecipientCollection($from)[0],
+            'returnPath' => $this->toRecipientCollection($message->getReturnPath()),                
             'replyTo' => $this->toRecipientCollection($message->getReplyTo()),
             'toRecipients' => $this->toRecipientCollection($message->getTo()),
             'ccRecipients' => $this->toRecipientCollection($message->getCc()),
